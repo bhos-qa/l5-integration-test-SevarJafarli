@@ -18,6 +18,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 class APIApplicationTest {
 
     @Test
+    @DisplayName("Repos Test")
     public void getReposTest() throws Exception {
 
         TestRestTemplate restTemplate = new TestRestTemplate();
@@ -27,6 +28,7 @@ class APIApplicationTest {
     }
 
     @Test
+    @DisplayName("Branches Test")
     public void getBranchesTest() throws Exception {
         TestRestTemplate restTemplate = new TestRestTemplate();
         String url = "https://60a21d3f745cd70017576092.mockapi.io/api/v1/repos/1/branches";
@@ -35,6 +37,7 @@ class APIApplicationTest {
     }
 
     @Test
+    @DisplayName("Commits Test")
     public void getCommitsTest() throws Exception {
         TestRestTemplate restTemplate = new TestRestTemplate();
         String url = "https://60a21d3f745cd70017576092.mockapi.io/api/v1/repos/1/branches/1/commits";
