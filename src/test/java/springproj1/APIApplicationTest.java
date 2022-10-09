@@ -2,6 +2,7 @@ package test.java.springproj1;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.json.JSONException;
 import org.junit.jupiter.api.extension.ExtendWith;
