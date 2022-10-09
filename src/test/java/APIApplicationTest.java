@@ -1,4 +1,3 @@
-package test.java.springproj1;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
@@ -14,14 +13,14 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import springproj1.APIApplication;
 
-@SpringBootTest
+@SpringBootTest(classes = APIApplication.class)
 class APIApplicationTest {
 
     @Test
     @DisplayName("Repos Test")
     public void getReposTest() throws Exception {
-
         TestRestTemplate restTemplate = new TestRestTemplate();
         String url = "https://60a21d3f745cd70017576092.mockapi.io/api/v1/repos";
         String response = restTemplate.getForObject(url, String.class);
